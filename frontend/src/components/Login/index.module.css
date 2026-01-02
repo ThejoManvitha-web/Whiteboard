@@ -1,0 +1,113 @@
+/* Background image and overlay */
+.loginBackground {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: url("https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1500&q=80")
+    center center/cover no-repeat;
+  z-index: 0;
+}
+.loginOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(30, 41, 59, 0.65); /* dark blue overlay */
+  z-index: 1;
+}
+
+.loginContainer {
+  position: relative;
+  z-index: 2;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.loginCard {
+  background: rgba(255, 255, 255, 0.97);
+  border-radius: 18px;
+  box-shadow: 0 8px 32px rgba(30, 41, 59, 0.18);
+  padding: 2.5rem 2rem 2rem 2rem;
+  max-width: 350px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2rem 1rem;
+}
+
+.loginTitle {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #2563eb;
+  margin-bottom: 1.5rem;
+  letter-spacing: 1px;
+  font-family: "Inter", "Roboto", Arial, sans-serif;
+}
+
+.loginForm {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+
+.loginForm input {
+  padding: 0.75rem 1rem;
+  border: 1.5px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: inherit;
+  background: #f8fafc;
+  transition: border 0.2s, box-shadow 0.2s;
+}
+.loginForm input:focus {
+  border: 1.5px solid #2563eb;
+  outline: none;
+  box-shadow: 0 0 0 2px #2563eb22;
+}
+
+.loginForm button {
+  padding: 0.75rem 1rem;
+  background: linear-gradient(90deg, #2563eb 60%, #7c3aed 100%);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 0.5rem;
+  transition: background 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 8px rgba(30, 41, 59, 0.08);
+}
+.loginForm button:hover {
+  background: linear-gradient(90deg, #1d4ed8 60%, #6d28d9 100%);
+}
+
+.loginLink {
+  color: #6366f1;
+  text-decoration: none;
+  font-weight: 500;
+  margin-top: 1.2rem;
+  transition: color 0.2s;
+}
+.loginLink:hover {
+  color: #2563eb;
+  text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+  .loginCard {
+    padding: 1.5rem 0.7rem 1.2rem 0.7rem;
+    max-width: 95vw;
+  }
+  .loginTitle {
+    font-size: 1.5rem;
+  }
+}
